@@ -16,13 +16,14 @@ public class LoginPage extends BasePage {
 	@FindBy(name = "pwd")
 	private WebElement pwTextBox;
 	
-	@FindBy(id = "LoginButton")
+	@FindBy(id = "loginButton")
 	private WebElement loginButton;
 	
-	@FindBy(xpath = "/span[contains(.,'invalid')]")
+	@FindBy(xpath = "//span[contains(.,'invalid')]")
 	private WebElement errmsg;
 	
-	public LoginPage(WebDriver driver) {
+	public LoginPage(WebDriver driver) 
+	{
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}

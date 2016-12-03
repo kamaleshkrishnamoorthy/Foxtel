@@ -10,19 +10,19 @@ import org.testng.Assert;
 
 public class EnteTimeTrackPage extends BasePage{
 
-	@FindBy(id = "logout Link")
+	@FindBy(id = "logoutLink")
 	private WebElement logoutLink;
 	
-	@FindBy(xpath = "(//div[@class='popup_menu_arrow'])[3]")
+	@FindBy(xpath = "//div[@class='popup_menu_icon support_icon']")
 	private WebElement help;
 	
-	@FindBy(linkText = "About actiTime")
+	@FindBy(linkText = "About your actiTIME")
 	private WebElement aboutActiTIME;
 	
-	@FindBy(xpath="//span[@class='product version']")
+	@FindBy(xpath="//span[@class='productVersion']")
 	private WebElement productVersion;
 	
-	@FindBy(xpath="//img[@title='close']")
+	@FindBy(xpath="//img[@title='Close']")
 	private WebElement closeButton;
 	
 		
@@ -60,6 +60,11 @@ public class EnteTimeTrackPage extends BasePage{
 		closeButton.click();
 	}
 	
+	public void VerifyTitle(String etitle)
+	{
+		String atitle = driver.getTitle();
+		Assert.assertEquals(atitle, etitle);
+	}
 	
 	
 	
