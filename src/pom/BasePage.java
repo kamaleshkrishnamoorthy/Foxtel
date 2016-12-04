@@ -3,6 +3,7 @@ package pom;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 public abstract class BasePage {
 
 		public WebDriver driver;
@@ -16,6 +17,14 @@ public abstract class BasePage {
 
 // if there is a new pom class written, all of the class should extend this basepage
 		
+		public void verifyTitle(String eTitle){
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+			}
+			String aTitle=driver.getTitle();
+			Assert.assertEquals(aTitle, eTitle);
+		}
 		
 }
  

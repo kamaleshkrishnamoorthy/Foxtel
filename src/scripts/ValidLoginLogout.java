@@ -31,13 +31,13 @@ public class ValidLoginLogout extends BaseTest {
 	//Verify home Page
 	
 	EnteTimeTrackPage e = new EnteTimeTrackPage(driver);
-	e.VerifyTitle(hp);
+	e.verifyTitle(hp);
 	//Click Logout
 	
 	e.ClickLogoutLink();
 	
 	//Verify Login page
-	e.VerifyTitle(lp);
+	e.verifyTitle(lp);
 	
 	}
 

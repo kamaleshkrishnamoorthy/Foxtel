@@ -8,19 +8,21 @@ import org.testng.Assert;
 
 public class LoginPage extends BasePage {
 
-	@FindBy(id = "username")
+	@FindBy(id="username")
 	private WebElement unTextBox;
+	
 	// the above is a varaible untext of type webelement. only decalred
 	//will be initialized during runtime only.
 	
-	@FindBy(name = "pwd")
+	
+	@FindBy(name="pwd")
 	private WebElement pwTextBox;
 	
-	@FindBy(id = "loginButton")
+	@FindBy(id="loginButton")
 	private WebElement loginButton;
 	
-	@FindBy(xpath = "//span[contains(.,'invalid')]")
-	private WebElement errmsg;
+	@FindBy(xpath="//span[contains(.,'invalid')]")
+	private WebElement errMsg;
 	
 	public LoginPage(WebDriver driver) 
 	{
@@ -45,7 +47,7 @@ public class LoginPage extends BasePage {
 	
 	public void verifyErrMsgDisplayed()
 	{
-		Assert.assertTrue(errmsg.isDisplayed());
+		Assert.assertTrue(errMsg.isDisplayed());
 	}
 	
 }

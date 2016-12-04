@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="scripts.ValidLoginLogout">
+      <class name="scripts.VerifyProductVersion">
         <methods>
           <include name="precondition"/>
+          <include name="testVerifyProductVersion"/>
           <include name="postCondition"/>
-          <include name="testValidLoginLogout"/>
         </methods>
-      </class> <!-- scripts.ValidLoginLogout -->
+      </class> <!-- scripts.VerifyProductVersion -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

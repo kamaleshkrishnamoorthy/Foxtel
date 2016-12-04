@@ -1,0 +1,11 @@
+<suite name="Suite" parallel = "tests">
+  <test name="TestGC">
+  <parameter name = "remoteURL" value = "http://192.168.1.45:4444/wd/hub"/>
+  <parameter name = "browser" value ="chrome"/>
+    <classes>
+      <class name="scripts.InvalidLogin"/>
+      <class name="scripts.VerifyProductVersion"/>
+      <class name="scripts.ValidLoginLogout"/>
+    </classes>
+  </test> 
+ </suite> 
